@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Interface</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="tab-container">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+          <button class="tab-btn" data-tab="tab2">Tab 2</button>
+        </div>
+        
+        <div class="tab-content">
+          <div id="tab1" class="tab-pane active">
+            <h2>JavaScript Event Handling</h2>
+            
+            <div class="slider-container">
+                <div class="slider">
+                  <div class="slide active">
+                    <img src="https://picsum.photos/id/10/600/400" alt="Image 1">
+                  </div>
+                  <div class="slide">
+                    <img src="https://picsum.photos/id/11/600/400" alt="Image 2">
+                  </div>
+                  <div class="slide">
+                    <img src="https://picsum.photos/id/12/600/400" alt="Image 3">
+                  </div>
+                  <div class="slide">
+                    <img src="https://picsum.photos/id/13/600/400" alt="Image 4">
+                  </div>
+                </div>
+                
+                <button class="slider-btn prev">&#10094;</button>
+                <button class="slider-btn next">&#10095;</button>
+                
+                <div class="dots">
+                  <span class="dot active" data-index="0" style="background-image: url('https://picsum.photos/id/10/600/400');"></span>
+                  <span class="dot" data-index="1" style="background-image: url('https://picsum.photos/id/11/600/400');"></span>
+                  <span class="dot" data-index="2" style="background-image: url('https://picsum.photos/id/12/600/400');"></span>
+                  <span class="dot" data-index="3" style="background-image: url('https://picsum.photos/id/13/600/400');"></span>
+                </div>
+              </div>
+          </div>
+          
+          <div id="tab2" class="tab-pane">
+            <h2>JavaScript DOM Manipulation</h2>
+            
+            <div class="todo-container">
+                <h1>To-Do List</h1>
+                
+                <div class="input-container">
+                  <input type="text" id="taskInput" placeholder="เพิ่มรายการใหม่...">
+                  <button id="addTask">เพิ่ม</button>
+                </div>
+                
+                <ul id="todoList"></ul>
+                
+                <div class="actions">
+                  <button id="clearCompleted">ลบรายการที่เสร็จแล้ว</button>
+                  <button id="clearAll">ลบทั้งหมด</button>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

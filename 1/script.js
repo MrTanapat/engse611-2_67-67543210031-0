@@ -29,19 +29,19 @@ function showSlide(index) {
 
 // เพิ่ม event listeners
 document.querySelector('.next').addEventListener('click', () => {
-  showSlide(currentSlide + 1);
+  showSlide(currentSlide + 1); // เปลี่ยนเป็นสไลด์ถัดไป
   resetTimer();
 });
 
 document.querySelector('.prev').addEventListener('click', () => {
-  showSlide(currentSlide - 1);
+  showSlide(currentSlide - 1); // เปลี่ยนเป็นสไลด์ก่อนหน้า
   resetTimer();
 });
 
 dots.forEach(dot => {
   dot.addEventListener('click', function() {
     const slideIndex = parseInt(this.getAttribute('data-index'));
-    showSlide(slideIndex);
+    showSlide(slideIndex); // เปลี่ยนไปยังสไลด์ที่เลือกจาก dot
     resetTimer();
   });
 });
@@ -49,13 +49,13 @@ dots.forEach(dot => {
 // ตั้งค่าสไลด์อัตโนมัติ
 function startSlideTimer() {
   slideInterval = setInterval(() => {
-    showSlide(currentSlide + 1);
+    showSlide(currentSlide + 1); // เลื่อนสไลด์ถัดไปทุก ๆ 3 วินาที
   }, 3000);
 }
 
 function resetTimer() {
-  clearInterval(slideInterval);
-  startSlideTimer();
+  clearInterval(slideInterval); // หยุดตัวจับเวลาเดิม
+  startSlideTimer(); // เริ่มต้นตัวจับเวลาใหม่
 }
 
 // เริ่มต้นสไลด์อัตโนมัติเมื่อโหลดหน้า
